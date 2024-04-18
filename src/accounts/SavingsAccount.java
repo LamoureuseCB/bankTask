@@ -12,7 +12,6 @@ public class SavingsAccount extends Account{
     @Override
     public void pay(int amount) {
         System.out.println("Нельзя проводить оплату со сберегательного счета");
-
     }
 
 
@@ -21,8 +20,10 @@ public class SavingsAccount extends Account{
         if(balance - amount < 0){
             System.out.println("Операция невозможна! Баланс на сберегательном счете всегда должен быть больше 0");
         }
-        balance -= amount;
-        account.addMoney(amount);
+        else {
+            balance -= amount;
+            account.addMoney(amount);
+        }
 
 
     }

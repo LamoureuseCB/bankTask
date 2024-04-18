@@ -11,8 +11,9 @@ public class CreditAccount extends Account{
         if(balance + amount > 0){
             System.out.println("Баланс не должен быть больше 0");
         }
-        balance += amount;
-
+        else{
+            balance += amount;
+        }
     }
 
     @Override
@@ -20,8 +21,10 @@ public class CreditAccount extends Account{
         if(balance + amount > 0){
             System.out.println("Баланс не должен быть больше 0");
         }
-        balance += amount;
-        account.pay(amount);
+        else{
+            balance += amount;
+            account.pay(amount);
+        }
     }
 
     @Override

@@ -12,7 +12,10 @@ public class CheckingAccount extends Account{
         if(balance - amount < 0){
             System.out.println("Баланс счета не должен быть меньше 0");
         }
-        balance -=amount;
+       else{
+           balance -= amount;
+        }
+
     }
 
     @Override
@@ -20,8 +23,11 @@ public class CheckingAccount extends Account{
         if(balance - amount < 0){
             System.out.println("Баланс счета не должен быть меньше 0");
         }
-        balance -=amount;
-        account.addMoney(amount);
+        else{
+            balance -=amount;
+            account.addMoney(amount);
+        }
+
 
 
     }
@@ -29,6 +35,5 @@ public class CheckingAccount extends Account{
     @Override
     public void addMoney(int amount) {
         balance += amount;
-
     }
 }

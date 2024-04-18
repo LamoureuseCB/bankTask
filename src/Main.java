@@ -13,6 +13,7 @@ public class Main {
         creditAccount.pay(100);
         checkingAccount.addMoney(100);
 
+
         System.out.println(savingsAccount.getBalance());
         System.out.println(creditAccount.getBalance());
         System.out.println(checkingAccount.getBalance());
